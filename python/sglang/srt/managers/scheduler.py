@@ -300,6 +300,7 @@ class Scheduler:
         self,
         recv_req: TokenizedGenerateReqInput,
     ):
+        set_random_seed(self.random_seed)
         req = Req(
             recv_req.rid,
             recv_req.input_text,
